@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bf2rcm51lxh56"]
+[gd_scene load_steps=7 format=3 uid="uid://bf2rcm51lxh56"]
 
 [ext_resource type="PackedScene" uid="uid://dp0ccj8iaqbkv" path="res://miestnosti/miestnost.tscn" id="1_dxcvu"]
 [ext_resource type="Script" path="res://miestnosti/miestnost.gd" id="1_sl44s"]
 [ext_resource type="PackedScene" uid="uid://csc5nfmtfab1f" path="res://basnicka.tscn" id="2_okcih"]
 [ext_resource type="AudioStream" uid="uid://c5udm8jmla264" path="res://zvuky/spongia les.wav" id="4_t7q65"]
+[ext_resource type="FontFile" uid="uid://6moiirquvjqw" path="res://fonty/berenika/Berenika-Book.ttf" id="5_0n1wo"]
+[ext_resource type="FontFile" uid="uid://cj4s17q8r5802" path="res://fonty/berenika/Berenika-Bold.ttf" id="6_bk7w7"]
 
 [node name="2" type="Node2D"]
 script = ExtResource("1_sl44s")
@@ -21,3 +23,24 @@ path = "res://videa/les.wav"
 [node name="hudba" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_t7q65")
 autoplay = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 1
+offset_right = 1379.0
+offset_bottom = 193.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_0n1wo")
+theme_override_fonts/bold_font = ExtResource("6_bk7w7")
+theme_override_font_sizes/normal_font_size = 6
+theme_override_font_sizes/bold_font_size = 27
+bbcode_enabled = true
+text = "[b]Nachádzaš sa v temnom lese
+Musíš nájsť cestu za svojim kamarátom, možno niekde bude napísaná
+V lese sa pohybuješ klikaním na šípky na pravej strane obrazovky
+Vždy sa dá vrátiť na predošlú scénu kliknutím tlačidla naspäť na ľavej strane obrazovky [/b]
+
+
+
+
+
+"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cnogp66wi1w4r"]
+[gd_scene load_steps=10 format=3 uid="uid://cnogp66wi1w4r"]
 
 [ext_resource type="Script" path="res://miestnosti/miestnost.gd" id="1_0p061"]
 [ext_resource type="PackedScene" uid="uid://dp0ccj8iaqbkv" path="res://miestnosti/miestnost.tscn" id="1_nqs3h"]
@@ -7,6 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://dtnabc0k0mcx7" path="res://zvuky/spongia kopec.wav" id="5_28pax"]
 [ext_resource type="PackedScene" uid="uid://dbc3ledxvgnqk" path="res://item_inventaru.tscn" id="5_vx3u8"]
 [ext_resource type="Texture2D" uid="uid://covlxy7dyv25j" path="res://grafika/itemy/rukavice.png" id="6_3jlmg"]
+[ext_resource type="FontFile" uid="uid://6moiirquvjqw" path="res://fonty/berenika/Berenika-Book.ttf" id="8_lswil"]
+[ext_resource type="FontFile" uid="uid://cj4s17q8r5802" path="res://fonty/berenika/Berenika-Bold.ttf" id="9_5qps4"]
 
 [node name="14" type="Node2D"]
 script = ExtResource("1_0p061")
@@ -33,3 +35,23 @@ meno = "rukavice"
 
 [node name="hudba" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_28pax")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 1
+offset_top = -30.0
+offset_right = 1379.0
+offset_bottom = 102.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("8_lswil")
+theme_override_fonts/bold_font = ExtResource("9_5qps4")
+theme_override_font_sizes/normal_font_size = 6
+theme_override_font_sizes/bold_font_size = 72
+bbcode_enabled = true
+text = "[b]. . . 
+[/b]
+
+
+
+
+
+"

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dp0ccj8iaqbkv"]
+[gd_scene load_steps=8 format=3 uid="uid://dp0ccj8iaqbkv"]
 
 [ext_resource type="PackedScene" uid="uid://djrqgq8esyq8s" path="res://inventar.tscn" id="2_v1xb6"]
 [ext_resource type="Texture2D" uid="uid://d0eop6ekufyap" path="res://miestnosti/pozadie1.png" id="4_xchig"]
+[ext_resource type="FontFile" uid="uid://6moiirquvjqw" path="res://fonty/berenika/Berenika-Book.ttf" id="5_860a2"]
 [ext_resource type="Texture2D" uid="uid://c5nkah1xbvkb" path="res://grafika/minca.png" id="5_mawrb"]
 [ext_resource type="PackedScene" uid="uid://cgiwt7qc23kmt" path="res://kniha.tscn" id="5_nrdxh"]
 [ext_resource type="PackedScene" uid="uid://bwe5xy5xgc2cg" path="res://carodejnik.tscn" id="6_sktqy"]
@@ -36,18 +37,22 @@ offset_right = 72.0
 offset_bottom = 892.0
 
 [node name="peniaze" type="Node2D" parent="."]
-position = Vector2(1705, 351)
+z_index = 9
+position = Vector2(1706, 1226)
 
 [node name="peniazky" type="Label" parent="peniaze"]
 z_index = 1
-offset_left = 76.8511
-offset_top = -28.0
-offset_right = 116.851
-offset_bottom = 27.0
+offset_left = 131.0
+offset_top = -268.0
+offset_right = 171.0
+offset_bottom = -213.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_860a2")
+text = "456"
 label_settings = SubResource("LabelSettings_nta6e")
 vertical_alignment = 1
 
 [node name="Minca" type="Sprite2D" parent="peniaze"]
-position = Vector2(43.8511, -3)
+position = Vector2(106, -243)
 scale = Vector2(0.358663, 0.358663)
 texture = ExtResource("5_mawrb")

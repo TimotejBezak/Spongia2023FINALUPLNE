@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxdyxx45eyajc"]
+[gd_scene load_steps=9 format=3 uid="uid://cxdyxx45eyajc"]
 
 [ext_resource type="PackedScene" uid="uid://dp0ccj8iaqbkv" path="res://miestnosti/miestnost.tscn" id="1_pncyo"]
 [ext_resource type="Script" path="res://miestnosti/miestnost.gd" id="1_xnlt5"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://csc5nfmtfab1f" path="res://basnicka.tscn" id="2_p2g8q"]
 [ext_resource type="Texture2D" uid="uid://bsguuljiu7o4e" path="res://grafika/ghost.png" id="5_22xoq"]
 [ext_resource type="AudioStream" uid="uid://dtnabc0k0mcx7" path="res://zvuky/spongia kopec.wav" id="6_chvrs"]
+[ext_resource type="FontFile" uid="uid://6moiirquvjqw" path="res://fonty/berenika/Berenika-Book.ttf" id="7_2yy8p"]
+[ext_resource type="FontFile" uid="uid://cj4s17q8r5802" path="res://fonty/berenika/Berenika-Bold.ttf" id="8_t81cf"]
 
 [node name="12" type="Node2D"]
 script = ExtResource("1_xnlt5")
@@ -31,3 +33,22 @@ texture = ExtResource("5_22xoq")
 [node name="hudba" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_chvrs")
 autoplay = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 1
+offset_right = 1379.0
+offset_bottom = 193.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_2yy8p")
+theme_override_fonts/bold_font = ExtResource("8_t81cf")
+theme_override_font_sizes/normal_font_size = 6
+theme_override_font_sizes/bold_font_size = 27
+bbcode_enabled = true
+text = "[b]Odpovedz správne na otázky ducha aby si prešiel jeho skúškou
+[/b]
+
+
+
+
+
+"

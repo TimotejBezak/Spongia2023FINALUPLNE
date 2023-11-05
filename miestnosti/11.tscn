@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://2q0b0ygxn5vi"]
 
-[ext_resource type="PackedScene" uid="uid://hsua5yqt072m" path="res://miestnosti/miestnost.tscn" id="1_oj6yy"]
+[ext_resource type="PackedScene" uid="uid://dp0ccj8iaqbkv" path="res://miestnosti/miestnost.tscn" id="1_oj6yy"]
 [ext_resource type="Script" path="res://miestnosti/miestnost.gd" id="1_quv7d"]
 
 [node name="11" type="Node2D"]

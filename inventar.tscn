@@ -8,6 +8,7 @@
 script = ExtResource("1_1dhtj")
 
 [node name="veci" type="Node2D" parent="."]
+position = Vector2(42, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="veci"]
 modulate = Color(1, 1, 1, 0.470588)
@@ -24,10 +25,11 @@ offset_bottom = 67.0068
 columns = 7
 
 [node name="zobrazit" type="Button" parent="."]
-offset_left = 1791.0
-offset_right = 1956.0
-offset_bottom = 108.0
-scale = Vector2(0.784219, 0.784219)
+offset_left = 1822.0
+offset_top = 1.0
+offset_right = 1853.0
+offset_bottom = 34.0
+scale = Vector2(3.39373, 3.39373)
 focus_mode = 0
 toggle_mode = true
 icon = ExtResource("3_35i10")

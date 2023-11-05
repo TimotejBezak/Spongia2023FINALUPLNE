@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ca4ldidi0w307"]
+[gd_scene load_steps=10 format=3 uid="uid://ca4ldidi0w307"]
 
 [ext_resource type="PackedScene" uid="uid://dp0ccj8iaqbkv" path="res://miestnosti/miestnost.tscn" id="1_6q31w"]
 [ext_resource type="Script" path="res://miestnosti/miestnost.gd" id="1_f61og"]
@@ -7,6 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://snlixidfp18e" path="res://zvuky/spongia jaskyna.wav" id="5_2xy5r"]
 [ext_resource type="PackedScene" uid="uid://dbc3ledxvgnqk" path="res://item_inventaru.tscn" id="5_k6ioa"]
 [ext_resource type="Texture2D" uid="uid://4impc6eryg7e" path="res://grafika/itemy/sal.png" id="6_y4vkq"]
+[ext_resource type="FontFile" uid="uid://6moiirquvjqw" path="res://fonty/berenika/Berenika-Book.ttf" id="8_ngo52"]
+[ext_resource type="FontFile" uid="uid://cj4s17q8r5802" path="res://fonty/berenika/Berenika-Bold.ttf" id="9_t2q23"]
 
 [node name="8" type="Node2D"]
 script = ExtResource("1_f61og")
@@ -35,3 +37,22 @@ meno = "sal"
 [node name="hudba" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_2xy5r")
 autoplay = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 1
+offset_right = 1379.0
+offset_bottom = 193.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("8_ngo52")
+theme_override_fonts/bold_font = ExtResource("9_t2q23")
+theme_override_font_sizes/normal_font_size = 6
+theme_override_font_sizes/bold_font_size = 27
+bbcode_enabled = true
+text = "[b]Hmmm? Ako by som tú truhlicu len mohol otvoriť
+[/b]
+
+
+
+
+
+"

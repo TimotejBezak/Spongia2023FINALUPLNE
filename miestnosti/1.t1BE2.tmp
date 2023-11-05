@@ -74,7 +74,7 @@ autoplay = true
 [node name="tutorial" type="Node2D" parent="."]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tutorial"]
-z_index = 1
+z_index = 4
 offset_right = 1322.0
 offset_bottom = 179.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
@@ -87,27 +87,6 @@ text = "[b]Čo budeš potrebovať: [color=#074f4e]lano, prázdna fľaša, sada n
 Veci zovihneš kliknutím ľavého tlačidla myši nad jednotlivými objektami.
 Neskôr ich vieš použit po kliknutí tlačidla v pravom hornom rohu.
 Nájdi všetko, čo budeš potrebovať[/b]
-
-
-
-
-
-"
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="tutorial"]
-z_index = 1
-offset_top = 138.0
-offset_right = 1322.0
-offset_bottom = 317.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("11_m7ctv")
-theme_override_fonts/bold_font = ExtResource("12_0ttjw")
-theme_override_font_sizes/normal_font_size = 6
-theme_override_font_sizes/bold_font_size = 27
-bbcode_enabled = true
-text = "[b][color=#18401c]Noviny sú veľmi dôležitým aspektom tejto hry
-Otvoríš si ich kliknutím na tlačidlo novín ktoré sa nachádza v pravom dolnom rohu
-Nachádza sa tam mnoho dôležitých informácii a určite sa ich oplatí prečítať si[/color][/b]
 
 
 

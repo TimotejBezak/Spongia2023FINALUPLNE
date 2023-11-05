@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://3t0u3adgauj4"]
+[gd_scene load_steps=8 format=3 uid="uid://3t0u3adgauj4"]
 
 [ext_resource type="PackedScene" uid="uid://dp0ccj8iaqbkv" path="res://miestnosti/miestnost.tscn" id="1_jeylo"]
 [ext_resource type="Script" path="res://miestnosti/miestnost.gd" id="1_trgys"]
 [ext_resource type="PackedScene" uid="uid://csc5nfmtfab1f" path="res://basnicka.tscn" id="2_xf06i"]
 [ext_resource type="PackedScene" uid="uid://dx5ddlemkgvku" path="res://varenie.tscn" id="3_4j14b"]
 [ext_resource type="AudioStream" uid="uid://d10pvinnan3hb" path="res://zvuky/spongia carodejnik.wav" id="6_2lfy7"]
+[ext_resource type="FontFile" uid="uid://6moiirquvjqw" path="res://fonty/berenika/Berenika-Book.ttf" id="6_yjbsd"]
+[ext_resource type="FontFile" uid="uid://cj4s17q8r5802" path="res://fonty/berenika/Berenika-Bold.ttf" id="7_metbl"]
 
 [node name="5" type="Node2D"]
 script = ExtResource("1_trgys")
@@ -26,10 +28,22 @@ z_index = 1
 stream = ExtResource("6_2lfy7")
 autoplay = true
 
-[node name="Label" type="Label" parent="."]
-offset_left = 20.0
-offset_top = 280.0
-offset_right = 1007.0
-offset_bottom = 389.0
-text = "Na ukuchtenie niecoho noveho potrebujes zmiesat dve rozne suroviny zo svojho inventara. Zmiesas ich tak, ze postupne tuknes na hrnce a z inventaru si vyberies surovinu, ktoru chces pouzit. Ked mas v obidvoch hrncoch surovinu, tuknutim na tlacidlo \"zmiesat\" sa suroviny zmiesaju a nad kotlom sa zjavy novovzniknuta surovina"
-autowrap_mode = 2
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 1
+offset_right = 1202.0
+offset_bottom = 179.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_yjbsd")
+theme_override_fonts/bold_font = ExtResource("7_metbl")
+theme_override_font_sizes/normal_font_size = 6
+theme_override_font_sizes/bold_font_size = 27
+bbcode_enabled = true
+text = "[b]Na ukuchtenie niečoho nového pridaj ingrediencie do kotla ťuknitím na červené plusko a následne na ingredienciu ktorú chceš pridať do kotla
+Keď pridáš obidve ingrediencie, klikni na tlačidlo uvariť
+Počaj chvíľu, a nad kotlom sa ti zobrazí nový item[/b]
+
+
+
+
+
+"

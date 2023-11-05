@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://dx5ddlemkgvku"]
+
+[ext_resource type="PackedScene" uid="uid://b7ld5yuvhs0yl" path="res://pridavac.tscn" id="1_0psit"]
+[ext_resource type="Script" path="res://varenie.gd" id="1_g4og5"]
+[ext_resource type="Texture2D" uid="uid://bur2buqyt1tee" path="res://grafika/icon.svg" id="2_j1wtp"]
+[ext_resource type="AudioStream" uid="uid://c8dva6dshv4av" path="res://zvuky/spongia varenie.wav" id="4_il4om"]
+[ext_resource type="Texture2D" uid="uid://bttir7hsywnsm" path="res://grafika/hrniec.png" id="5_ednr8"]
+
+[node name="varenie" type="Node2D" groups=["varenie"]]
+script = ExtResource("1_g4og5")
+
+[node name="pridavac" parent="." instance=ExtResource("1_0psit")]
+z_index = 1
+offset_left = 1355.0
+offset_top = 938.0
+offset_right = 1413.0
+offset_bottom = 996.0
+
+[node name="Hrniec" type="Sprite2D" parent="pridavac"]
+z_index = -1
+position = Vector2(24, 16)
+texture = ExtResource("5_ednr8")
+
+[node name="pridavac2" parent="." instance=ExtResource("1_0psit")]
+z_index = 1
+offset_left = 1520.0
+offset_top = 936.0
+offset_right = 1578.0
+offset_bottom = 994.0
+
+[node name="Hrniec2" type="Sprite2D" parent="pridavac2"]
+z_index = -1
+position = Vector2(25, 18)
+texture = ExtResource("5_ednr8")
+
+[node name="uvar" type="Button" parent="."]
+offset_left = 1387.0
+offset_top = 646.0
+offset_right = 1523.0
+offset_bottom = 782.0
+focus_mode = 0
+icon = ExtResource("2_j1wtp")
+flat = true
+
+[node name="zvuk" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_il4om")
+volume_db = 24.0
+
+[node name="Hrniec3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1450, 500)
+texture = ExtResource("5_ednr8")
+
+[node name="neda_sa" type="Label" parent="."]
+offset_left = 1390.0
+offset_top = 784.0
+offset_right = 1430.0
+offset_bottom = 807.0
+
+[connection signal="button_down" from="uvar" to="." method="_on_uvar_button_down"]

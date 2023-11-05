@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cpw3yh5v8iol1"
+path="res://.godot/imported/spongia dvih zo zeme.wav-166ae280701066301d2e696f0fc2b7f3.sample"
+
+[deps]
+
+source_file="res://zvuky/spongia dvih zo zeme.wav"
+dest_files=["res://.godot/imported/spongia dvih zo zeme.wav-166ae280701066301d2e696f0fc2b7f3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

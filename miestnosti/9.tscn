@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://0p25t4c4hbic"]
+
+[ext_resource type="PackedScene" uid="uid://dp0ccj8iaqbkv" path="res://miestnosti/miestnost.tscn" id="1_5eqlj"]
+[ext_resource type="Script" path="res://miestnosti/miestnost.gd" id="1_gns6d"]
+[ext_resource type="PackedScene" uid="uid://cskuu07ifh3hq" path="res://hucanie.tscn" id="2_d3pvh"]
+[ext_resource type="PackedScene" uid="uid://csc5nfmtfab1f" path="res://basnicka.tscn" id="2_rksoc"]
+[ext_resource type="AudioStream" uid="uid://ch546h6oj4ger" path="res://zvuky/spongia dramaticke.wav" id="5_1aebh"]
+
+[node name="9" type="Node2D"]
+script = ExtResource("1_gns6d")
+obrazok_pozadie = "res://miestnosti/jaskyna3.png"
+kam_dalej = Array[int]([10])
+kam_spet = 1
+
+[node name="basnicka" parent="." instance=ExtResource("2_rksoc")]
+path = "res://videa/prisera.wav"
+
+[node name="hucanie" parent="." instance=ExtResource("2_d3pvh")]
+
+[node name="miestnost" parent="." instance=ExtResource("1_5eqlj")]
+
+[node name="zbieracie_veci" type="Node2D" parent="."]
+
+[node name="hudba" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_1aebh")
+autoplay = true

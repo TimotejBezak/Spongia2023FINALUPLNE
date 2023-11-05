@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm22q2whcjort"]
+
+[ext_resource type="Script" path="res://pamet.gd" id="1_duqxt"]
+[ext_resource type="PackedScene" uid="uid://bbl7bdq34sqny" path="res://pamet/tlacidlo.tscn" id="2_a6ib1"]
+[ext_resource type="Texture2D" uid="uid://q3ghjk3bguar" path="res://pamet/farba0.png" id="3_1g8ak"]
+[ext_resource type="Texture2D" uid="uid://bur2buqyt1tee" path="res://grafika/icon.svg" id="4_4hhyl"]
+
+[node name="pamet" type="Node2D"]
+script = ExtResource("1_duqxt")
+
+[node name="tlacidlo" parent="." instance=ExtResource("2_a6ib1")]
+offset_left = 245.0
+offset_top = 101.0
+offset_right = 303.0
+offset_bottom = 159.0
+scale = Vector2(2.82484, 2.82484)
+icon = ExtResource("3_1g8ak")
+
+[node name="tlacidlo2" parent="." instance=ExtResource("2_a6ib1")]
+offset_left = 463.0
+offset_top = 101.0
+offset_right = 521.0
+offset_bottom = 159.0
+scale = Vector2(2.82484, 2.82484)
+icon = ExtResource("3_1g8ak")
+farba = 1
+
+[node name="tlacidlo3" parent="." instance=ExtResource("2_a6ib1")]
+offset_left = 245.0
+offset_top = 322.0
+offset_right = 303.0
+offset_bottom = 380.0
+scale = Vector2(2.82484, 2.82484)
+icon = ExtResource("3_1g8ak")
+farba = 2
+
+[node name="tlacidlo4" parent="." instance=ExtResource("2_a6ib1")]
+offset_left = 466.0
+offset_top = 322.0
+offset_right = 524.0
+offset_bottom = 380.0
+scale = Vector2(2.82484, 2.82484)
+icon = ExtResource("3_1g8ak")
+farba = 3
+
+[node name="menic" type="Sprite2D" parent="."]
+position = Vector2(1488, 631)
+scale = Vector2(4.95157, 4.95157)
+
+[node name="info" type="Label" parent="."]
+offset_left = 144.0
+offset_top = 490.0
+offset_right = 184.0
+offset_bottom = 513.0
+
+[node name="dalsi_level" type="Button" parent="."]
+offset_left = 69.0
+offset_top = 219.0
+offset_right = 205.0
+offset_bottom = 355.0
+focus_mode = 0
+icon = ExtResource("4_4hhyl")
+
+[node name="Label" type="Label" parent="dalsi_level"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 67.0
+
+[connection signal="button_down" from="dalsi_level" to="." method="_on_dalsi_level_button_down"]

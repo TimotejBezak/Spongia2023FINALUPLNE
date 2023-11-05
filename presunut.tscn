@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkmxynucci4kd"]
+
+[ext_resource type="Script" path="res://presunut.gd" id="1_4ru6j"]
+[ext_resource type="Texture2D" uid="uid://bxgdd3opfdbrp" path="res://grafika/ikony/home.png" id="1_trspa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qdkxg"]
+font_size = 24
+font_color = Color(0.2, 0.427451, 1, 1)
+
+[node name="presunut" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+focus_mode = 0
+icon = ExtResource("1_trspa")
+flat = true
+script = ExtResource("1_4ru6j")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 108.0
+offset_bottom = 109.0
+label_settings = SubResource("LabelSettings_qdkxg")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="neda_sa" type="Label" parent="."]
+layout_mode = 0
+offset_left = -142.0
+offset_top = 53.0
+offset_right = -102.0
+offset_bottom = 76.0
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://3t0u3adgauj4"]
+
+[ext_resource type="PackedScene" uid="uid://dp0ccj8iaqbkv" path="res://miestnosti/miestnost.tscn" id="1_jeylo"]
+[ext_resource type="Script" path="res://miestnosti/miestnost.gd" id="1_trgys"]
+[ext_resource type="PackedScene" uid="uid://csc5nfmtfab1f" path="res://basnicka.tscn" id="2_xf06i"]
+[ext_resource type="PackedScene" uid="uid://dx5ddlemkgvku" path="res://varenie.tscn" id="3_4j14b"]
+[ext_resource type="AudioStream" uid="uid://d10pvinnan3hb" path="res://zvuky/spongia carodejnik.wav" id="6_2lfy7"]
+
+[node name="5" type="Node2D"]
+script = ExtResource("1_trgys")
+obrazok_pozadie = "res://miestnosti/elixirovna.png"
+kam_dalej = Array[int]([6, 7])
+kam_spet = 1
+
+[node name="basnicka" parent="." instance=ExtResource("2_xf06i")]
+path = "res://videa/elixirovne.wav"
+
+[node name="varenie" parent="." instance=ExtResource("3_4j14b")]
+z_index = 1
+
+[node name="miestnost" parent="." instance=ExtResource("1_jeylo")]
+
+[node name="zbieracie_veci" type="Node2D" parent="."]
+
+[node name="hudba" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_2lfy7")
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 280.0
+offset_right = 1007.0
+offset_bottom = 389.0
+text = "Na ukuchtenie niecoho noveho potrebujes zmiesat dve rozne suroviny zo svojho inventara. Zmiesas ich tak, ze postupne tuknes na hrnce a z inventaru si vyberies surovinu, ktoru chces pouzit. Ked mas v obidvoch hrncoch surovinu, tuknutim na tlacidlo \"zmiesat\" sa suroviny zmiesaju a nad kotlom sa zjavy novovzniknuta surovina"
+autowrap_mode = 2

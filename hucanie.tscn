@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://cskuu07ifh3hq"]
+
+[ext_resource type="Script" path="res://mikrofon.gd" id="1_iw5r6"]
+[ext_resource type="Texture2D" uid="uid://dk6kyet2bbq1i" path="res://grafika/monstrum.png" id="2_2fukq"]
+[ext_resource type="AudioStream" uid="uid://c2gnkwdtmwfow" path="res://zvuky/spongia monster zvuk.wav" id="3_esh1b"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_v6w1e"]
+
+[node name="hucanie" type="Node2D"]
+z_index = 1
+
+[node name="mikrofon" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamMicrophone_v6w1e")
+autoplay = true
+bus = &"Record"
+script = ExtResource("1_iw5r6")
+
+[node name="ProgressBar" type="ProgressBar" parent="mikrofon"]
+offset_left = 1108.0
+offset_top = 924.0
+offset_right = 1435.0
+offset_bottom = 951.0
+show_percentage = false
+
+[node name="zvuk_prisery" type="AudioStreamPlayer2D" parent="mikrofon"]
+stream = ExtResource("3_esh1b")
+volume_db = 13.118
+
+[node name="Monstrum" type="Sprite2D" parent="mikrofon"]
+position = Vector2(1265, 483)
+scale = Vector2(7.91509, 7.91509)
+texture = ExtResource("2_2fukq")
+
+[node name="Label" type="Label" parent="mikrofon"]
+offset_left = 1057.0
+offset_top = 299.0
+offset_right = 1473.0
+offset_bottom = 447.0
+autowrap_mode = 2

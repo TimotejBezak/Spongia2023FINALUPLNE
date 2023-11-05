@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://jrsahpk4b2np"]
+
+[ext_resource type="PackedScene" uid="uid://dp0ccj8iaqbkv" path="res://miestnosti/miestnost.tscn" id="1_malk5"]
+[ext_resource type="Script" path="res://miestnosti/miestnost.gd" id="1_xbke6"]
+[ext_resource type="PackedScene" uid="uid://cq6uwa4jvsi2x" path="res://sadenie.tscn" id="2_5gawg"]
+[ext_resource type="PackedScene" uid="uid://csc5nfmtfab1f" path="res://basnicka.tscn" id="2_385n3"]
+[ext_resource type="AudioStream" uid="uid://d10pvinnan3hb" path="res://zvuky/spongia carodejnik.wav" id="5_n4imm"]
+
+[node name="6" type="Node2D"]
+script = ExtResource("1_xbke6")
+obrazok_pozadie = "res://miestnosti/zahrada.png"
+kam_spet = 5
+
+[node name="basnicka" parent="." instance=ExtResource("2_385n3")]
+path = "res://videa/zahrada.wav"
+
+[node name="sadenie" parent="." instance=ExtResource("2_5gawg")]
+z_index = 1
+
+[node name="miestnost" parent="." instance=ExtResource("1_malk5")]
+
+[node name="zbieracie_veci" type="Node2D" parent="."]
+
+[node name="hudba" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_n4imm")
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 120.0
+offset_top = 261.0
+offset_right = 723.0
+offset_bottom = 425.0
+text = "V zahrade mozes nieco zasadit, a mozno ti z toho nieco vyrastie. Zasadis to tak, ze tuknes na tlacidlo \"+\" a vyberies si z inventara vec, ktoru chces zasadit"
+autowrap_mode = 2

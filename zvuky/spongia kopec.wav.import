@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dtnabc0k0mcx7"
+path="res://.godot/imported/spongia kopec.wav-0d040c44f0d0e441cdcd71f314e3a189.sample"
+
+[deps]
+
+source_file="res://zvuky/spongia kopec.wav"
+dest_files=["res://.godot/imported/spongia kopec.wav-0d040c44f0d0e441cdcd71f314e3a189.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
